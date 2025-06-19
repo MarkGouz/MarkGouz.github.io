@@ -2,8 +2,8 @@
 function Projects() {
   return (
     <div>
-      <h2>Introduction</h2>
-      <p>This is the introduction section of the portfolio.</p>
+      <h2>Projects</h2>
+      <p>Coming Soon</p>
     </div>
   );
 }
