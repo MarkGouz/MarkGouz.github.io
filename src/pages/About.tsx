@@ -1,7 +1,7 @@
 function Introduction() {
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}> <img src="/src/assets/Profile.jpg" alt="Profile" style={{ width: '200px', height: 'auto'}} className="image-bordered"/> </div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}> <img src="/Profile.jpg" alt="Profile" style={{ width: '200px', height: 'auto'}} className="image-bordered"/> </div>
       <h2 style={{ textAlign:'left' , fontSize:'3rem'}}>Introduction</h2>
       <hr />
       <p style={{ textAlign:'left', fontSize:'2rem'}}>I am Mark Gouzoulis. I graduated from the University of Maryland with a Bachelor's degree in Computer Science and a minor in Statistics. 
