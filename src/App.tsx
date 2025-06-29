@@ -1,13 +1,13 @@
 // src/App.tsx
 import { Link, Route, Routes } from 'react-router-dom';
 import Introduction from './pages/About.tsx';
-import Projects from './pages/Projects';
+import Projects from './pages/Projects_page.tsx';
 import Resume from './pages/Resume';
 import Blog from './pages/Blog';
 import { useEffect,useState } from 'react';
 import { Toggle } from './components/Toggle.tsx'
 import './App.css';
-
+import Block_Jump from './pages/projects/Block_Jump';
 
 
 const App: React.FC = () => {
@@ -36,6 +36,7 @@ const App: React.FC = () => {
         <Route path="/projects" element={<Projects />} />
         <Route path="/resume" element={<Resume />} />
         <Route path="/blog" element={<Blog />} />
+        <Route path="/Block_Jump" element={<Block_Jump />} />
       </Routes>
     </div>
   );
