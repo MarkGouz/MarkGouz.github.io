@@ -9,7 +9,7 @@ export const Toggle: React.FC<ToggleProps> = ({ isOn, handleToggle }) => (
     onClick={handleToggle}
     aria-label="Toggle Dark Mode"
     style={{
-      background: isOn ? "#1f2937" : "#ffffff", // dark gray vs. light yellow
+      background: isOn ? "#1f2937" : "#ffffff",
       borderRadius: "9999px",
       width: "60px",
       height: "30px",
