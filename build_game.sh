@@ -1,11 +1,12 @@
 #!/bin/bash
 
-emcc /Users/markgouzoulis/c++-lib/raylib-quickstart/src/main.cpp \
+emcc ~/c++-lib/raylib-quickstart/src/main.cpp \
   -I/Users/markgouzoulis/c++-lib/raylib/src \
   -I/Users/markgouzoulis/c++-lib/raylib-quickstart/include \
   -L/Users/markgouzoulis/c++-lib/raylib/build_web/raylib \
   -lraylib \
-  -o /Users/markgouzoulis/MarkGouz.github.io/public/game.html \
+  --shell-file src/custom_canvas.html \
+  -o docs/game.html \
   -s USE_GLFW=3 \
   -s ASYNCIFY \
   -s FORCE_FILESYSTEM=1 \
@@ -13,4 +14,3 @@ emcc /Users/markgouzoulis/c++-lib/raylib-quickstart/src/main.cpp \
   -s EXPORTED_FUNCTIONS='["_main"]' \
   -s EXPORTED_RUNTIME_METHODS='["ccall", "cwrap"]' \
   -std=c++17
-
