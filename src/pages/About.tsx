@@ -1,7 +1,26 @@
 function Introduction() {
   return (
     <div>
-      <div style={{ display: 'flex', justifyContent: 'flex-end' }}> <img src="/Profile.jpg" alt="Profile" style={{ width: '200px', height: 'auto'}} className="image-bordered"/> </div>
+      {/*
+      <div style={{ display: 'flex', justifyContent: 'flex-end' }}> 
+        <picture>
+          <source srcSet="/Profile.webp" type="image/webp" />
+          <source srcSet="/Profile-optimized.jpg" type="image/jpeg" />
+          <img 
+            src="/Profile-optimized.jpg" 
+            alt="Profile" 
+            style={{ 
+              width: '200px', 
+              height: 'auto',
+              maxWidth: '100%',
+              borderRadius: '8px'
+            }} 
+            className="image-bordered"
+            loading="eager"
+          />
+        </picture>
+      </div>
+      */}
       <h2 style={{ textAlign:'left' , fontSize:'3rem'}}>Introduction</h2>
       <hr />
       <p style={{ textAlign:'left', fontSize:'2rem'}}>I am Mark Gouzoulis. I graduated from the University of Maryland with a Bachelor's degree in Computer Science and a minor in Statistics. 
