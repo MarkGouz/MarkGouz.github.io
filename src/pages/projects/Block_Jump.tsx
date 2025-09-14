@@ -1,4 +1,3 @@
-import React from 'react';
 import { Box, Typography, Container, Paper } from '@mui/material';
 import RaylibGame from '../../components/Games/Raylib_game';
 

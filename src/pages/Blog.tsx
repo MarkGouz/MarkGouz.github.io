@@ -1,4 +1,3 @@
-import React from 'react';
 import { Link } from 'react-router-dom';
 import { 
   Box, 
@@ -16,7 +15,6 @@ import { blogPosts } from '../data/blogPosts';
 function Blog() {
   return (
     <Box sx={{ width: '100%' }}>
-      
       <Box sx={{ maxWidth: 900, mx: 'auto', px: 3, py: 8 }}>
         <Typography variant="h2" component="h1" gutterBottom sx={{ fontWeight: 'bold' }}>
           Blog
