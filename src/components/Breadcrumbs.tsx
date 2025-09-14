@@ -82,7 +82,8 @@ const Breadcrumbs: React.FC = () => {
       bgcolor: 'background.paper',
       borderBottom: 1,
       borderColor: 'divider',
-      width: '100%'
+      width: '100%',
+      maxWidth: '100%'
     }}>
       <MuiBreadcrumbs 
         separator={<NavigateNextIcon fontSize="small" />}
@@ -90,6 +91,9 @@ const Breadcrumbs: React.FC = () => {
         sx={{
           '& .MuiBreadcrumbs-separator': {
             color: 'text.secondary'
+          },
+          '& .MuiBreadcrumbs-ol': {
+            flexWrap: 'wrap'
           }
         }}
       >

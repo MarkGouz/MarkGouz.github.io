@@ -3,23 +3,38 @@ import { useParams, Link } from 'react-router-dom';
 import BlogPost from '../components/BlogPost';
 import { Box, Typography, Button } from '@mui/material';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { getBlogPost } from '../data/blogPosts';
 
 // Import your MDX files
 import PersonalSitePost from '../blog/personal-site.mdx';
 
-const blogPosts = {
-  'personal-site': {
-    component: PersonalSitePost,
-    title: 'How I Built This Site',
-    date: '2024-01-15',
-    readTime: '3 min read'
-  }
-};
-
 function BlogPostPage() {
   const { postId } = useParams<{ postId: string }>();
   
-  if (!postId || !blogPosts[postId as keyof typeof blogPosts]) {
+  if (!postId) {
+    return (
+      <Box sx={{ maxWidth: 900, mx: 'auto', px: 3, py: 8, textAlign: 'center' }}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          Post Not Found
+        </Typography>
+        <Typography variant="body1" color="text.secondary" paragraph>
+          No post ID provided.
+        </Typography>
+        <Button 
+          component={Link}
+          to="/blog" 
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+        >
+          Back to Blog
+        </Button>
+      </Box>
+    );
+  }
+
+  const post = getBlogPost(postId);
+  
+  if (!post) {
     return (
       <Box sx={{ maxWidth: 900, mx: 'auto', px: 3, py: 8, textAlign: 'center' }}>
         <Typography variant="h3" component="h1" gutterBottom>
@@ -40,8 +55,33 @@ function BlogPostPage() {
     );
   }
 
-  const post = blogPosts[postId as keyof typeof blogPosts];
-  const PostComponent = post.component;
+  // Map post IDs to MDX components
+  const mdxComponents: Record<string, React.ComponentType> = {
+    'personal-site': PersonalSitePost
+  };
+
+  const PostComponent = mdxComponents[postId];
+  
+  if (!PostComponent) {
+    return (
+      <Box sx={{ maxWidth: 900, mx: 'auto', px: 3, py: 8, textAlign: 'center' }}>
+        <Typography variant="h3" component="h1" gutterBottom>
+          MDX Component Not Found
+        </Typography>
+        <Typography variant="body1" color="text.secondary" paragraph>
+          The MDX component for this post is not available.
+        </Typography>
+        <Button 
+          component={Link}
+          to="/blog" 
+          variant="outlined"
+          startIcon={<ArrowBackIcon />}
+        >
+          Back to Blog
+        </Button>
+      </Box>
+    );
+  }
 
   return (
     <Box sx={{ minHeight: '100vh', bgcolor: 'grey.50', py: 4 }}>

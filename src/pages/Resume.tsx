@@ -1,20 +1,36 @@
-// src/pages/Introduction.jsx
+import React from 'react';
+import { Box } from '@mui/material';
+
 const Resume: React.FC = () => {
   return (
-    <div style={{
-      paddingTop: '60px',      // space for navbar
+    <Box sx={{
+      position: 'fixed',
+      top: '140px', // Position below navbar + breadcrumbs
+      left: 0,
+      right: 0,
+      bottom: 0,
       width: '100vw',
-      height: 'calc(100vh - 60px)',  // fill remaining viewport height
-      boxSizing: 'border-box',  // include padding in height calc
+      height: 'calc(100vh - 140px)',
+      display: 'flex',
+      justifyContent: 'flex-start', // Left align
+      alignItems: 'flex-start',
+      padding: 0,
+      margin: 0,
+      overflow: 'hidden',
+      zIndex: 1
     }}>
       <iframe
-        src="/Mark_Gouzoulis_Resume_v8.pdf" // put your PDF in the public folder
+        src="/Mark_Gouzoulis_Resume_v8.pdf"
         title="Resume"
         width="100%"
         height="100%"
-        style={{ border: 'none' }}
+        style={{ 
+          border: 'none',
+          display: 'block',
+          minHeight: '100%'
+        }}
       />
-    </div>
+    </Box>
   );
 }
 export default Resume;
