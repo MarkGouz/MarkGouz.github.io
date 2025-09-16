@@ -1,3 +1,6 @@
+import IconButton from '@mui/material/IconButton';
+import DarkMode from '@mui/icons-material/DarkMode';
+import LightMode from '@mui/icons-material/LightMode';
 // Toggle.tsx
 type ToggleProps = {
   isOn: boolean;
@@ -5,7 +8,7 @@ type ToggleProps = {
 };
 
 export const Toggle: React.FC<ToggleProps> = ({ isOn, handleToggle }) => (
-  <button
+  <IconButton
     onClick={handleToggle}
     aria-label="Toggle Dark Mode"
     style={{
@@ -22,14 +25,6 @@ export const Toggle: React.FC<ToggleProps> = ({ isOn, handleToggle }) => (
       transition: "all 0.3s ease-in-out",
     }}
   >
-    <span
-      role="img"
-      aria-label={isOn ? "Moon" : "Sun"}
-      style={{
-        transition: "transform 0.3s",
-      }}
-    >
-      {isOn ? "🌙" : "☀️"}
-    </span>
-  </button>
+      {isOn ? <DarkMode /> : <LightMode />}
+  </IconButton>
 );
