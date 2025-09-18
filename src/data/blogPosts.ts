@@ -29,7 +29,7 @@ export const blogPosts: BlogPost[] = [
     id: 'personal-site',
     title: 'How I Built This Site',
     description: 'A detailed look at the tech stack and development process behind this personal website.',
-    date: '2024-01-15',
+    date: '2025-09-15',
     rawMarkdown: personalSiteMarkdown,
     readTime: calculateReadingTime(personalSiteMarkdown) // Auto-calculate!
   }
