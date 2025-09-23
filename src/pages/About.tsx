@@ -23,9 +23,11 @@ function Introduction() {
       */}
       <h2 style={{ textAlign:'left' , fontSize:'3rem'}}>Introduction</h2>
       <hr />
-      <p style={{ textAlign:'left', fontSize:'2rem'}}>I am Mark Gouzoulis. I graduated from the University of Maryland with a Bachelor's degree in Computer Science and a minor in Statistics. 
-        I was in the Gemstones honor college where I worked with a team of undergraduates to research Quantum Systems and the applications of machine learning in that field. 
-        I love working on machine learning and learning more about software development.	I mainly choose to code in Python and C++.</p>
+      <p style={{ textAlign:'left', fontSize:'2rem'}}>I am Mark Gouzoulis, a recent graduate from the University of Maryland with a Bachelor’s degree in Computer Science 
+        and a minor in Statistics. During my time in the Gemstone Honors College, I collaborated with a team of undergraduates to research 
+        quantum systems and explore applications of machine learning in that field. My academic and research experiences have fueled my passion 
+        for machine learning and software development. I primarily program in Python and C++, and I was recently admitted to Georgia Tech’s 
+        OMSCS program, where I look forward to deepening my knowledge and advancing my skills.</p>
         <h3>Contact</h3>
         <div style={{ display:'flex', gap:'1rem', justifyContent:'center' }}>
         <a href="https://github.com/MarkGouz" target="_blank" rel="noopener noreferrer">

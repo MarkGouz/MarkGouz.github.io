@@ -36,12 +36,12 @@ const App: React.FC = () => {
       </nav>
       
       {/* Breadcrumbs directly below navbar */}
-      <Box sx={{ position: 'fixed', top: '80px', left: 0, right: 0, zIndex: 999 }}>
+      <Box sx={{ position: 'fixed', top: '4vh', left: 0, right: 0, zIndex: 999 }}>
         <Breadcrumbs />
       </Box>
       
       {/* Main Content with proper spacing for navbar + breadcrumbs */}
-      <Box sx={{ pt: '140px' }}>
+      <Box sx={{ pt: '50px' }}>
         {/* Page Content */}
         <Routes>
           <Route path="/" element={<Introduction />} />
