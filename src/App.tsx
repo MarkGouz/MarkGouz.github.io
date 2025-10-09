@@ -10,6 +10,7 @@ import { Toggle } from './components/Toggle.tsx';
 import Breadcrumbs from './components/Breadcrumbs';
 import './App.css';
 import Block_Jump from './pages/projects/Block_Jump';
+import Contact from './pages/Contact.tsx';
 import { Box } from '@mui/material';
 
 const App: React.FC = () => {
@@ -28,6 +29,7 @@ const App: React.FC = () => {
           <li><Link to="/projects">Projects</Link></li>
           <li><Link to="/resume">Resume</Link></li>
           <li><Link to="/blog">Blog</Link></li>
+          <li><Link to="/contact">Contact</Link></li>
         </ul>
         <Toggle
           isOn={darkMode}
@@ -50,6 +52,7 @@ const App: React.FC = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/blog/:postId" element={<BlogPost />} />
           <Route path="/Block_Jump" element={<Block_Jump />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </Box>
     </Box>
